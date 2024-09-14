@@ -11,6 +11,8 @@
     <style>
         body {
             margin: 0;
+            display: flex;
+            flex-direction: column;
         }
         nav {
             width: 100%;
@@ -26,6 +28,7 @@
             padding-right: 10px;
             position: fixed;
             top: 0;
+            z-index: 1;
         }
 
         #logo {
@@ -58,6 +61,94 @@
             text-decoration-color: #FFB533;
         }
 
+        footer {
+            width: 100%;
+            height: 70px;
+            background-color: black;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #intro {
+            background-color: pink;
+            height: 108vh;
+            margin-top: 70px;
+        }
+
+        #dia {
+            background-color: rgb(69, 176, 230);
+        }
+
+        #tarde {
+            background-color: rgb(249, 249, 133);
+        }
+
+        #noche {
+            background-color: rgb(73, 38, 82);
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .transicion {
+            width: 100%;
+            height: 70px;
+            
+        }
+
+        #intro-dia {
+            background-image: linear-gradient(pink,  rgb(69, 176, 230));
+        }
+
+        #dia-tarde {
+            background-image: linear-gradient(rgb(69, 176, 230), rgb(249, 249, 133));
+        }
+
+        #tarde-noche {
+            background-image: linear-gradient( rgb(249, 249, 133), rgb(73, 38, 82));
+        }
+
+        #noche-footer {
+            background-image: linear-gradient( rgb(73, 38, 82), black);
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        
+
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%; 
+            transform: rotate(90deg); 
+        }
+
+        .img-container img {
+            border-radius: 30px;
+            scale: 0.8;
+        }
+
+        #img-intro {
+            background-image: url("../images/intro.PNG");
+        }
+        
+
     </style>
 </head>
 <body>
@@ -68,6 +159,33 @@
             <a href="">Exhibiciones</a><a href="">Galería</a><a href="">Eventos</a><a href="">Visitar</a>
         </div>
     </nav>
+
+    <section id="intro">
+        <div class="container">
+            <div id="img-intro" class="img-container">
+                <!-- <img src="../images/intro.PNG" alt=""> -->
+            </div>
+            <div></div>
+        </div>
+    </section>
+
+    <!-- <div id="intro-dia" class="transicion"></div> -->
+
+    <section id="dia">
+        <div class="container"></div>
+    </section>
+
+    <div id ="dia-tarde" class="transicion"></div>
+
+    <section id="tarde"></section>
+
+    <div id="tarde-noche" class="transicion"></div>
+
+    <section id = "noche"></section>
+
+    <div id="noche-footer" class="transicion"></div>
+
+    <footer><em>By</em> carlosjhoanDev</footer>
     
 </body>
 </html>
