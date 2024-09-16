@@ -37,6 +37,11 @@
             z-index: 1;
         }
 
+        #logo-nombre {
+            display: flex;
+            align-items: center;
+        }
+
         #logo {
             width: 80px;
             filter: invert(1);
@@ -45,6 +50,11 @@
         a {
             text-decoration: none;
 
+        }
+
+        #nombre-one-day-museo {
+            filter: invert(1);
+            width: 200px;
         }
 
         #items {
@@ -75,28 +85,44 @@
 
         section {
             width: 100%;
-            height: 100vh;
+            /* height: 100vh; */
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         #intro {
-            background-color: pink;
+            background-image: linear-gradient(to right, rgb(253, 196, 206, 0.52), rgba(253, 186, 198, 0.52)),
+            url("../images/pared.PNG");
             height: 90vh;
             margin-top: 70px;
         }
 
         #dia {
-            background-color: rgb(69, 176, 230);
+            /* background-color: rgb(69, 176, 230); */
+            /* background-image: linear-gradient(to right, rgb(73, 73, 245, 0.52), rgb(69, 176, 230, 0.52)),
+            url("../images/pared.PNG"); */
+            background-image: linear-gradient(to right, rgb(253, 196, 206, 0.52), rgba(253, 186, 198, 0.52)),
+            url("../images/pared.PNG");
+            background-repeat: repeat;
+            /* background-size: cover; */
         }
 
         #tarde {
-            background-color: rgb(249, 249, 133);
+            background-image: linear-gradient(to right, rgb(253, 196, 206, 0.52), rgba(253, 186, 198, 0.52)),
+            url("../images/pared.PNG");
+            /* background-image: linear-gradient(to right, rgb(69, 176, 230, 0.52), rgba(239, 74, 234, 0.52)),
+            url("../images/pared.PNG"); */
+            background-repeat: repeat;
         }
 
         #noche {
-            background-color: rgb(73, 38, 82);
+            background-image: linear-gradient(to right, rgb(253, 196, 206, 0.52), rgba(253, 186, 198, 0.52)),
+            url("../images/pared.PNG");
+            /* background-image: linear-gradient(to right, rgba(139, 51, 136, 0.52), rgba(58, 2, 56, 0.52)),
+            url("../images/pared.PNG"); */
+            background-repeat: repeat;
+            
         }
 
         footer {
@@ -112,8 +138,9 @@
             
         }
 
-        #intro-dia {
+        /* #intro-dia {
             background-image: linear-gradient(pink,  rgb(69, 176, 230));
+            
         }
 
         #dia-tarde {
@@ -126,7 +153,7 @@
 
         #noche-footer {
             background-image: linear-gradient( rgb(73, 38, 82), black);
-        }
+        } */
 
         .container {
             width: 100%;
@@ -149,7 +176,9 @@
 
 
         #transicion-vertical {
-            background-image: linear-gradient(to right, rgba(89, 74, 77, 0.423), pink);
+            background-image: linear-gradient(to right, rgba(67, 65, 65, 0.52), rgba(253, 186, 198, 0.52)),
+            url("../images/pared.PNG");
+            /* background-image: linear-gradient(to right, rgba(89, 74, 77, 0.423), pink); */
             height: 100%;
             width: 2%;
 
@@ -292,6 +321,43 @@
             color:rgb(25, 4, 108);;
         }
 
+        .seccion {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .container-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .obra {
+            border-radius: 20px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .titulo-obra {
+            font-family: "Protest Guerrilla", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            text-decoration:underline;
+        }
+
+        h1 {
+            font-family: "Protest Guerrilla", sans-serif;
+            font-style: normal;
+        }
+
         
         
 
@@ -300,7 +366,11 @@
 <body>
 
     <nav>
-        <a href=""><img id="logo" src="../images/logo.png" alt=""></a>
+        <div id="logo-nombre">
+            <a href=""><img id="logo" src="../images/logo.png" alt=""></a>
+            <img  id="nombre-one-day-museo" src="../images/nombre_museo.PNG" alt="">
+        </div>
+        
         <div id="items">
             <a href="">Exhibiciones</a><a href="">Galería</a><a href="">Eventos</a><a href="">Visitar</a>
         </div>
@@ -324,19 +394,89 @@
 
     <!-- <div id="intro-dia" class="transicion"></div> -->
 
-    <section id="dia">
-        <div class="container"></div>
+    <section id="dia" class="seccion">
+        <h1>Día</h1>
+        <div class="container-cards">
+            <div  class="card">
+                <img class="obra" src="../images/picture_1.PNG" alt="">
+                <p class="titulo-obra">Recién despierto</p>
+            </div>
+
+            <div  class="card">
+                <img class="obra" src="../images/coleccion_2.PNG" alt="">
+                <p class="titulo-obra">Rayo de luz</p>
+            </div>
+
+            <div  class="card">
+                <img class="obra" src="../images/picture_3.PNG" alt="">
+                <p class="titulo-obra">Mañana de invierno</p>
+            </div>
+
+            <div  class="card">
+                <img class="obra" src="../images/picture_9.PNG" alt="">
+                <p class="titulo-obra">Amanecemos con niebla</p>
+            </div>
+            
+        </div>
     </section>
 
-    <div id ="dia-tarde" class="transicion"></div>
+    <!-- <div id ="dia-tarde" class="transicion"></div> -->
 
-    <section id="tarde"></section>
+    <section id="tarde" class="seccion">
+        <h1>Tarde</h1>
+        <div class="container-cards">
+            <div  class="card">
+                <img class="obra" src="../images/picture_4.PNG" alt="">
+                <p class="titulo-obra">Tarde de playa</p>
+            </div>
 
-    <div id="tarde-noche" class="transicion"></div>
+            <div  class="card">
+                <img class="obra" src="../images/picture_7.PNG" alt="">
+                <p class="titulo-obra">Sol de verano</p>
+            </div>
 
-    <section id = "noche"></section>
+            <div  class="card">
+                <img class="obra" src="../images/picture_8.PNG" alt="">
+                <p class="titulo-obra">Se despide la tarde</p>
+            </div>
 
-    <div id="noche-footer" class="transicion"></div>
+            <div  class="card">
+                <img class="obra" src="../images/picture_2.PNG" alt="">
+                <p class="titulo-obra">Tarde bajo el agua</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- <div id="tarde-noche" class="transicion"></div> -->
+
+    <section id = "noche" class="seccion">
+        <h1>Noche</h1>
+        <div class="container-cards">
+            <div  class="card">
+                <img class="obra" src="../images/picture_1.PNG" alt="">
+                <p class="titulo-obra">Recién despierto</p>
+            </div>
+
+            <div  class="card">
+                <img class="obra" src="../images/coleccion_2.PNG" alt="">
+                <p class="titulo-obra">Rayo de luz</p>
+            </div>
+
+            <div  class="card">
+                <img class="obra" src="../images/picture_3.PNG" alt="">
+                <p class="titulo-obra">Mañana de invierno</p>
+            </div>
+
+            <div  class="card">
+                <img class="obra" src="../images/picture_9.PNG" alt="">
+                <p class="titulo-obra">Amanecemos con niebla</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- <div id="noche-footer" class="transicion"></div> -->
 
     <footer><em>By</em> carlosjhoanDev</footer>
     
