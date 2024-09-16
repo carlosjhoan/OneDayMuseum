@@ -6,6 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../images/logo.ico">
     <title>One_Day_Museum</title>
     <style>
@@ -77,7 +83,7 @@
 
         #intro {
             background-color: pink;
-            height: 108vh;
+            height: 90vh;
             margin-top: 70px;
         }
 
@@ -131,22 +137,16 @@
 
 
         .img-container {
+            background-image: url("../images/intro.PNG");
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content:center;
             align-items: center;
             width: 50%;
             height: 100%; 
-            transform: rotate(90deg); 
         }
 
-        .img-container img {
-            border-radius: 30px;
-            scale: 0.8;
-        }
 
-        #img-intro {
-            background-image: url("../images/intro.PNG");
-        }
 
         #transicion-vertical {
             background-image: linear-gradient(to right, rgba(89, 74, 77, 0.423), pink);
@@ -154,6 +154,145 @@
             width: 2%;
 
         }
+
+        #frase-intro {
+            text-align: justify;
+            width: 60%;
+            
+        }
+
+        .autor {
+            text-align: right;
+            width: 60%;
+            font-family: "Protest Guerrilla", sans-serif;
+            font-style: normal;
+            font-size: 2.0rem;
+
+        }
+
+        .frase {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2.0rem;
+        }
+
+        .img-derecha {
+            transition: width 0.3s;
+        }
+        
+        
+        .img-izquierda {
+            width: 32px;
+            transition: width 0.3s;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: "Protest Guerrilla", sans-serif;
+            font-style: normal;
+            font-size: 1.2rem;
+            width: 170PX;
+            height: 50px;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            padding: 10PX;
+            border-radius: 30PX;
+            background-color: transparent;
+            border: 3PX solid;
+
+
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+        
+
+        button:hover .img-izquierda{
+            width: 0;
+            transition: width 0.3s;
+
+        }
+
+        button:hover .img-derecha{
+            width: 32px;
+            transition: width 0.3s;
+            filter: invert(1);
+
+        }
+
+        .img-derecha {
+            width: 0;
+        }
+
+        .texto-seccion {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .letra-texto-comun {
+            font-family: "Fira Sans Condensed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.6rem;
+        }
+
+        #pauta-museo {
+            width: 70%;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .fecha {
+            font-family: "Protest Guerrilla", sans-serif;
+            font-style: normal;
+            text-decoration:underline;
+        }
+
+        .coleccion {
+            font-family: "Protest Guerrilla", sans-serif;
+            font-style: normal;
+        }
+
+        .azul-rey {
+            color: rgb(25, 4, 108);
+        }
+
+        .celeste {
+            color: rgb(69, 176, 230);
+        }
+
+        .amarillo {
+            background-color: black;
+            color: #face5e;
+            
+        }
+
+        .amarillo-tostado {
+            background-color: black;
+            color: #f9b60b;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .morado {
+            color: rgb(73, 38, 82);
+        }
+
+        .azul-oscuro {
+            color:rgb(25, 4, 108);;
+        }
+
+        
         
 
     </style>
@@ -169,9 +308,17 @@
 
     <section id="intro">
         <div class="container">
-            <div id="img-intro" class="img-container"></div>
+            <div id="img-intro" class="img-container">
+                <p id="frase-intro" class="frase texto-intro">"... en el olvido reposa el milagro de estar vivos; el maravilloso milagro de que siempre ocurre un día" </p>
+                <p class="autor frase-intro">Oliverio Domínguez</p>
+            </div>
             <div id="transicion-vertical"></div>
-            <div></div>
+            <div class = "texto-seccion">
+                <p id= "fecha-coleccion" class = "letra-texto-comun">Del <span class="fecha">16 - Septiembre</span> al <span class="fecha">7 - Octubre</span></p>
+                <p id="pauta-museo" class = "letra-texto-comun">Por primera vez en la ciudad <em><span class="coleccion azul-rey">L</span><span class="coleccion azul-rey">o</span><span class="coleccion celeste">s</span> <span class="coleccion celeste">c</span><span class="coleccion amarillo">o</span><span class="coleccion amarillo">l</span><span class="coleccion amarillo-tostado">o</span><span class="coleccion amarillo-tostado">r</span><span class="coleccion verde">e</span><span class="coleccion verde">s</span> <span class="coleccion morado">d</span><span class="coleccion morado">e</span><span class="coleccion morado">l</span> <span class="coleccion azul-oscuro">d</span><span class="coleccion azul-oscuro">í</span><span class="coleccion azul-oscuro">a</span></em>, una fantástica colección de <span class="autor">Oliverio Domínguez</spanclass></p>
+                <p class="letra-texto-comun">¡21 días de un arte colorido y mágico!</p>
+                <button id="asiste"><img  class="img-izquierda" src="../images/pre-asiste.png" alt="">Asiste<img class="img-derecha" src="../images/asiste.png" alt=""></button>
+            </div>
         </div>
     </section>
 
